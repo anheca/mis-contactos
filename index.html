@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis Contactos</title>
+
+    <link rel="stylesheet" href="./src/css/normalize.css" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="./src/css/all.css" />
+
+    <!-- local Styles -->
+    <link rel="stylesheet" href="./src/css/styles.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="contenedor-titulo">
+        <span>Editar Contacto</span>
+      </div>
+      <div class="wrapper">
+        <div class="form-wrapper">
+          <form action="" autocomplete="off">
+            <ul>
+              <!-- nombre -->
+              <li>
+                <div class="icons">
+                  <span><i class="fas fa-user-circle user-icon"></i></span>
+                </div>
+                <label class="col-2">
+                  <span>Nombre</span>
+                  <input type="text" autocomplete="off" name="name" required />
+                </label>
+                <!-- apellido -->
+                <label class="col-2">
+                  <span>Apellidos</span>
+                  <input type="text" autocomplete="off" name="lastname" required />
+                </label>
+              </li>
+
+              <!-- company -->
+              <li>
+                <div><i class="fas fa-building small-icons"></i></div>
+                <label class="col-2">
+                  <span>Empresa</span>
+                  <input type="text" autocomplete="off" name="company" />
+                </label>
+              </li>
+
+              <!-- puesto -->
+              <li>
+                <label class="col-2">
+                  <span>Puesto</span>
+                  <input type="text" autocomplete="off" name="jobposition" />
+                </label>
+              </li>
+
+              <!-- email -->
+              <li>
+                <div><i class="fas fa-envelope small-icons"></i></div>
+                <label class="col-2">
+                  <span>Email</span>
+                  <input type="email" autocomplete="off" name="email" required />
+                </label>
+              </li>
+
+              <!-- telefono -->
+              <li>
+                <label class="tel-1">
+                  <span>Telefono</span>
+                  <input id="phone" type="phone" autocomplete="off" name="phone" required />
+                </label>
+                <!-- <label for="" class="col-3 ocul">#</label> -->
+                <select class="form-select" name="phonetype" id="select-phone"></select>
+                <span class="action-buttons" id="phonePlus">
+                  <i class="fas fa-plus-circle xsmall-icons options"></i>
+                </span>
+              </li>
+
+              <!-- Direccion -->
+              <li>
+                <div><i class="fas fa-map-marker-alt small-icons"></i></div>
+                <label class="col-2">
+                  <span>Direccion[calle, numero]</span>
+                  <input type="text" autocomplete="off" name="address1" required />
+                </label>
+                <label class="col-2">
+                  <span>linea 2[barrio, num-interno]</span>
+                  <input type="text" autocomplete="off" name="address2" />
+                </label>
+                <label class="col-2">
+                  <span class="top pais">País</span>
+                  <select class="form-select" name="pais" id="country"></select>
+                </label>
+              </li>
+
+              <!-- <label for="" class="col-3 ocul">#</label> -->
+              <li>
+                <label class="tel-1">
+                  <span>Cod Postal</span>
+                  <input id="zipcode" type="text" autocomplete="off" name="zipcode" />
+                </label>
+                <select class="form-select" name="provincia" id="states"></select>
+              </li>
+
+              <!-- boton guardar contacto -->
+              <li>
+                <div class="col-r">
+                  <button type="button" class="btn btn-primary botones" id="add">Cancelar</button>
+                  <button type="submit" class="btn btn-primary botones" id="add">Guardar</button>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
