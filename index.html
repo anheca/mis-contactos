@@ -22,96 +22,117 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
+    <input type="checkbox" id="btn-modal" />
+    <label for="btn-modal" class="lbl-modal">Open Modal</label>
 
-
-
-    <!-- formulario para contactos -->
-    <div class="contenedor">
-      <div class="contenedor-titulo">
-        <span>Editar Contacto</span>
-      </div>
-      <div class="wrapper">
-        <div class="form-wrapper">
+    <div class="modal">
+      <!-- contenedor formulario -->
+      <div class="contenedor">
+        <header><span>Editar Contacto</span></header>
+        <label for="btn-modal">x</label>
+        <div class="contenido">
           <form autocomplete="off">
-            <ul>
-              <!-- nombre -->
-              <li>
-                <div class="icons">
-                  <span><i class="fas fa-user-circle user-icon"></i></span>
-                </div>
-                <label class="col-2">
+            <div class="wrapper">
+              <div class="icons">
+                <span><i class="fas fa-user-circle user-icon"></i></span>
+              </div>
+              <div class="col-2">
+                <label>
                   <span>Nombre</span>
                   <input type="text" autocomplete="off" id="name" required />
                 </label>
-                <!-- apellido -->
-                <label class="col-2">
+              </div>
+              <div class="col-2">
+                <label for="">
                   <span>Apellidos</span>
-                  <input type="text" autocomplete="off" id="lastname"/>
+                  <input type="text" autocomplete="off" id="lastname" />
                 </label>
-              </li>
-
-              <!-- company -->
-              <li>
+              </div>
+              <div class="icons">
                 <i class="fas fa-building small-icons"></i>
-                <label class="col-2">
+              </div>
+
+              <div class="col-2">
+                <label>
                   <span>Empresa</span>
                   <input type="text" autocomplete="off" id="company" />
                 </label>
-                <!-- puesto -->
+              </div>
+
+              <div class="col-2">
                 <label class="col-2">
                   <span>Puesto</span>
                   <input type="text" autocomplete="off" id="jobposition" />
                 </label>
+              </div>
 
-                <!-- email -->
+              <div class="sm-icons">
                 <i class="fas fa-envelope small-icons"></i>
-                <label class="col-2">
+              </div>
+
+              <div class="col-2">
+                <label>
                   <span>Email</span>
-                  <input type="email" autocomplete="off" id="email"/>
+                  <input type="email" autocomplete="off" id="email" />
                 </label>
-              </li>
+              </div>
 
-
-
-              <!-- telefono -->
-              <li>
-                <label class="tel-1">
+              <div class="col-1">
+                <label>
                   <span>Telefono</span>
                   <input id="phone" type="phone" autocomplete="off" id="phone" required />
                 </label>
+              </div>
+
+              <div class="col-3">
                 <select class="form-select" id="phonetype"></select>
-                <span class="action-buttons">
+              </div>
+              <div class="col-4">
+                <span class="col-4 action-buttons">
                   <i class="fas fa-plus-circle xsmall-icons options"></i>
                 </span>
-              </li>
+              </div>
 
-              <!-- Direccion -->
-              <li>
+              <div class="sm-icons">
                 <i class="fas fa-map-marker-alt small-icons"></i>
-                <label class="col-2">
-                  <span>Direccion[calle, numero]</span>
+              </div>
+
+              <div class="col-2">
+                <label>
+                  <span>Direccion 1 [calle, numero]</span>
                   <input type="text" autocomplete="off" id="address1" />
                 </label>
-                <label class="col-2">
-                  <span>linea 2[barrio, num-interno]</span>
+              </div>
+
+              <div class="col-2">
+                <label>
+                  <span>Direccion 2 [barrio, num-interno]</span>
                   <input type="text" autocomplete="off" id="address2" />
                 </label>
-                <label class="col-2">
+              </div>
+
+              <div class="col-2">
+                <label>
                   <span class="top pais">País</span>
                   <select class="form-select" id="country" id="country"></select>
                 </label>
-                <label class="tel-1">
+              </div>
+
+              <div class="col-1">
+                <label>
                   <span>Cod Postal</span>
                   <input id="zipcode" type="text" autocomplete="off" name="zipcode" />
                 </label>
-                <select class="form-select" id="state"></select>
-              </li>
-            </ul>
-            <!-- boton guardar contacto -->
-            <div class="form-buttons">
-                <button type="reset" class="btn btn-primary botones" id="cancel">Cancelar</button>
-                <button type="button" class="btn btn-primary botones" id="add">Guardar</button>
               </div>
+
+              <div class="col-3">
+                <select class="form-select" id="state"></select>
+              </div>
+            </div>
+
+            <div class="form-buttons">
+              <button type="reset" class="btn btn-primary botones" id="cancel">Cancelar</button>
+              <button type="button" class="btn btn-primary botones" id="add">Guardar</button>
             </div>
           </form>
         </div>

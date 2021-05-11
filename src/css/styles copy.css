@@ -72,10 +72,7 @@ body,
   background: #fafafa;
   box-shadow: var(--shadow);
   transition: all 500ms ease;
-
-  display: flex;
-  flex-direction: column;
-
+  position: relative;
   transform: translateY(-30%);
 }
 
@@ -84,25 +81,25 @@ body,
 }
 
 .contenedor header {
-  /* padding: 10px; */
-  background: rgb(240, 157, 3);
+  padding: 10px;
+  background: #db8046;
   color: #fff;
-  border-bottom: var(--grey-border);
 }
 
 .contenedor header span {
   margin: auto;
-  height: 4rem;
+  height: 4.5rem;
   letter-spacing: 0.00625em;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.5rem;
   align-items: center;
   display: flex;
   padding: 16px 30px;
+  border-bottom: var(--grey-border);
 }
 
-.contenedor > label {
+.contenedor.lbl-modal {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -134,29 +131,128 @@ body,
   background-color: transparent;
 }
 
+.form-wrapper {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: block;
+}
+
+form li {
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 25px 25px;
+  gap: 10px;
+}
+
 .icons,
-.sm-icons {
+.small-icons {
   grid-column: 1;
   text-align: center;
-  margin: auto;
 }
 
-.col-1 {
-  grid-column: 2 / 3;
-}
-
-.col-2 {
+/* form label, */
+/* form input, */
+.wrapper label,
+.wrapper input {
+  display: -ms-inline-grid;
   grid-column: 2 / 4;
 }
 
-.col-3 {
-  grid-column: 3 / 4;
+.tel-1 {
+  grid-column: 2 / 3;
 }
 
-.col-4 {
-  grid-column: 4 / 5;
+.op1 {
+  grid-column: 4;
+  text-align: center;
 }
 
+.op2 {
+  grid-column: 5;
+}
+
+.col-r {
+  grid-column: 1 / span 6;
+  margin-top: 15px;
+  text-align: end;
+}
+
+form .fas {
+  opacity: 0.4;
+  color: var(--high-color);
+}
+
+form .user-icon {
+  font-size: 2.2rem;
+  line-height: 30px;
+}
+
+form div.sm-icons {
+  display: inherit;
+  grid-column: 1 /1;
+  align-items: center;
+  justify-content: center;
+}
+
+li i.small-icons {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin: auto;
+}
+
+form .action-buttons {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin: auto;
+}
+
+form .action-buttons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.options:hover {
+  opacity: 0.9;
+}
+
+.btn {
+  width: 140px;
+  height: 45px;
+  background-color: var(--bg-color);
+  color: var(--high-color);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: 0.35s;
+}
+
+.btn:hover {
+  opacity: 0.6;
+  border-radius: 25px;
+  background-color: var(--high-color);
+  color: var(--fg-color-white);
+}
+
+li.botones {
+  gap: 40px;
+}
+
+/*.... REPOSO ....*/
+
+form div {
+  margin-bottom: 5px;
+  padding-top: 10px;
+
+  border: 1px solid green;
+}
+
+.wrapper > span,
 form span,
 form select,
 form input {
@@ -165,30 +261,28 @@ form input {
   font: 400 14px / 20px Roboto, sans-serif;
   width: 100%;
   line-height: 33px;
+  border: 1px solid red;
 }
 
 form select {
-  padding: 0px 0px;
+  padding: 8px 0px;
   border: none;
   outline: none;
   color: var(--select-color);
   opacity: 0.7;
   border-bottom: var(--grey-border);
-  margin: 6px 0;
-  background-color: transparent;
-  color: var(--select-color);
-  height: 21px;
-  border-bottom: var(--grey-border);
+  margin: 5px 0;
   /* -webkit-appearance: none; */
 }
 
-form label {
+.wrapper form label {
   display: block;
   width: 100%;
   border-bottom: var(--grey-border);
-  padding: 8px 0px 0px 0px;
+  padding: 10px 0px 0px 0px;
   position: relative;
-  margin: 4px 0;
+  box-sizing: border-box;
+  margin: 5px 0;
 }
 
 #country {
@@ -213,18 +307,6 @@ form label span {
   left: 2px;
 }
 
-form .action-buttons {
-  display: flex;
-  justify-content: center;
-  font-size: 0.9rem;
-  margin: auto;
-}
-
-form .action-buttons:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
 /*....     FOCUS    ....*/
 form label.focus {
   border-bottom: var(--blue-border);
@@ -241,25 +323,6 @@ form label span.top {
   left: 0px;
   top: -12px;
   font-size: 0.7rem;
-}
-
-.btn {
-  width: 140px;
-  height: 45px;
-  background-color: var(--bg-color);
-  color: var(--high-color);
-  border: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.6;
-  transition: 0.35s;
-}
-
-.btn:hover {
-  opacity: 0.6;
-  border-radius: 25px;
-  background-color: var(--high-color);
-  color: var(--fg-color-white);
 }
 
 .form-buttons {
