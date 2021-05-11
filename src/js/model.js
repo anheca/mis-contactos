@@ -14,6 +14,7 @@ export default class Model {
 
   addContact(contact) {
     this.contacts.push(contact)
+    console.log('adding to the model...')
     console.log(this.contacts)
     return { ...contact }
   }

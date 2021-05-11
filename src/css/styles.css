@@ -71,7 +71,7 @@ body,
 
   background: #fafafa;
   box-shadow: var(--shadow);
-  transition: all 500ms ease;
+  transition: all 700ms ease;
 
   display: flex;
   flex-direction: column;
@@ -151,10 +151,14 @@ body,
 
 .col-3 {
   grid-column: 3 / 4;
+  display: flex;
+  align-items: flex-end;
 }
 
 .col-4 {
   grid-column: 4 / 5;
+  display: flex;
+  align-items: center;
 }
 
 form span,
@@ -171,14 +175,13 @@ form select {
   padding: 0px 0px;
   border: none;
   outline: none;
-  color: var(--select-color);
   opacity: 0.7;
-  border-bottom: var(--grey-border);
-  margin: 6px 0;
+  border-bottom: 1px solid silver;
+  margin: 4px 0;
   background-color: transparent;
   color: var(--select-color);
-  height: 21px;
-  border-bottom: var(--grey-border);
+  height: 33px;
+
   /* -webkit-appearance: none; */
 }
 
