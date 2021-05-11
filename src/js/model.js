@@ -1,4 +1,4 @@
-class Model {
+export default class Model {
   constructor() {
     this.view = null
     this.contacts = []
@@ -12,9 +12,9 @@ class Model {
     return this.contacts
   }
 
-  addContact(contact, name, lastname) {
-    console.log(contact)
-    console.log(name)
-    console.log(lastname)
+  addContact(contact) {
+    this.contacts.push(contact)
+    console.log(this.contacts)
+    return { ...contact }
   }
 }

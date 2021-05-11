@@ -1,17 +1,19 @@
-class View {
+import AddContact from './add-contact.js'
+
+export default class View {
   constructor() {
     this.model = null
-    this.table =
-      'por ahora vacio --- pero debe tener in id del htlm para pegar los records de contacto '
+    this.table = 'por ahora vacio'
+    this.addContactForm = new AddContact()
+
+    this.addContactForm.onClick((contact) => this.addContact(contact))
   }
 
   setModel(model) {
     this.model = model
   }
 
-  addContact(contact, name, lastname) {
-    console.log(contact)
-    console.log(name)
-    console.log(lastname)
+  addContact(contact) {
+    this.model.addContact(contact)
   }
 }

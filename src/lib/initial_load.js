@@ -7,21 +7,19 @@ import DropDown from '../js/components/dropdown.js'
 const service = new Service()
 const dropdown = new DropDown()
 
-const phoneSel = document.getElementById('select-phone')
+const phoneSel = document.getElementById('phonetype')
 const countrySel = document.getElementById('country')
-const statesSel = document.getElementById('states')
+const statesSel = document.getElementById('state')
 const phone = document.getElementById('phone')
 
 const init = () => {
   // populate controls
   const countryData = service.getCountries()
-  console.log('contrydata:', countryData)
   const itemSelected = 'Argentina'
 
   // countries
   dropdown.fill(countrySel, countryData, itemSelected)
   const countryId = parseInt(countrySel.options[countrySel.selectedIndex].value)
-  console.log('contryid:', countryId)
   const stateSelected = ''
 
   // states

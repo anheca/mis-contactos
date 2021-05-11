@@ -4,15 +4,17 @@
   box-sizing: border-box;
 }
 :root {
-  font-size: 100%;
   --bg-color: #fff;
   --fg-color: #5c5c5e;
+  --fg-color-white: #fff;
+  --fg-color-silver: silver;
   --high-color: blue;
+  --select-color: darkblue;
   --grey-border: 1px solid silver;
   --blue-border: 2px solid blue;
-  --select-color: darkblue;
   --input-background: #fafafa;
   --input-background: transparent;
+  --focus-color: rgb(51, 41, 249);
 }
 
 body {
@@ -53,7 +55,7 @@ body {
   background-color: transparent;
 }
 
-ul {
+.form-wrapper {
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -104,10 +106,18 @@ form .user-icon {
   line-height: 30px;
 }
 
-form .small-icons {
+form div.sm-icons {
+  display: inherit;
+  grid-column: 1 /1;
+  align-items: center;
+  justify-content: center;
+}
+
+li i.small-icons {
   display: flex;
   justify-content: center;
-  align-content: center;
+  font-size: 0.9rem;
+  margin: auto;
 }
 
 form .action-buttons {
@@ -142,7 +152,7 @@ form .action-buttons:hover {
   opacity: 0.6;
   border-radius: 25px;
   background-color: var(--high-color);
-  color: white;
+  color: var(--fg-color-white);
 }
 
 li.botones {
@@ -174,6 +184,7 @@ select {
   opacity: 0.7;
   border-bottom: var(--grey-border);
   margin: 5px 0;
+  /* -webkit-appearance: none; */
 }
 
 label {
@@ -202,7 +213,7 @@ label input {
 }
 
 label span {
-  color: silver;
+  color: var(--fg-color-silver);
   position: absolute;
   top: 8px;
   left: 2px;
@@ -215,7 +226,7 @@ label.focus {
 }
 
 label span.focus {
-  color: rgb(51, 41, 249);
+  color: var(--focus-color);
 }
 
 /*....     TOP    ....*/
@@ -224,4 +235,11 @@ label span.top {
   left: 0px;
   top: -12px;
   font-size: 0.7rem;
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
 }
