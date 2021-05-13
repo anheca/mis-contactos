@@ -1,0 +1,272 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --bg-color: #fff;
+  --fg-color: #5c5c5e;
+  --fg-color-white: #fff;
+  --fg-color-silver: silver;
+  --high-color: blue;
+  --select-color: darkblue;
+  --grey-border: 1px solid silver;
+  --blue-border: 2px solid blue;
+  --input-background: #fafafa;
+  --input-background: transparent;
+  --focus-color: rgb(51, 41, 249);
+  --hot-pink: hotpink;
+  --bg-desvanecido: rgba(0, 0, 0, 0.6);
+  --shadow: 1px 7px 25px rgba(0, 0, 0, 0.9);
+}
+
+body {
+  background-size: 100vw;
+  background-color: var(--hot-pink);
+  color: var(--fg-color);
+}
+
+body,
+.modal {
+  width: 100%;
+  height: 100vh;
+
+  letter-spacing: 0.1428571em;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* modal start */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--bg-desvanecido);
+  transition: all 500ms ease;
+  /* second step */
+  opacity: 0;
+  visibility: hidden;
+}
+
+#btn-modal:checked ~ .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.contenedor {
+  width: 450px;
+  height: 740px;
+
+  bottom: auto;
+  right: auto;
+  overflow: hidden;
+
+  background: #fafafa;
+  box-shadow: var(--shadow);
+  transition: all 700ms ease;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: translateY(-30%);
+
+  & > label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  header {
+    /* padding: 10px; */
+    background: rgb(240, 157, 3);
+    color: #fff;
+    border-bottom: var(--grey-border);
+    span {
+      margin: auto;
+      height: 4rem;
+      letter-spacing: 0.00625em;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.5rem;
+      align-items: center;
+      display: flex;
+      padding: 16px 30px;
+    }
+  }
+}
+
+#btn-modal:checked ~ .modal .contenedor {
+  transform: translateY(0%);
+}
+
+#btn-modal {
+  display: none;
+}
+
+.lbl-modal {
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* modal-end */
+
+.wrapper {
+  margin: auto;
+  min-height: 100%;
+  padding: 10px 15px;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 25px 25px;
+  gap: 10px;
+  background-color: transparent;
+}
+
+.icons,
+.sm-icons {
+  grid-column: 1;
+  text-align: center;
+  margin: auto;
+}
+
+.col-1 {
+  grid-column: 2 / 3;
+}
+
+.col-2 {
+  grid-column: 2 / 4;
+}
+
+.col-3 {
+  grid-column: 3 / 4;
+  display: flex;
+  align-items: flex-end;
+}
+
+.col-4 {
+  grid-column: 4 / 5;
+  display: flex;
+  align-items: center;
+}
+
+form span,
+form select,
+form input {
+  padding: 0;
+  letter-spacing: 0.025em;
+  font: 400 14px / 20px Roboto, sans-serif;
+  width: 100%;
+  line-height: 33px;
+}
+
+form select {
+  padding: 0px 0px;
+  border: none;
+  outline: none;
+  opacity: 0.7;
+  border-bottom: 1px solid silver;
+  margin: 4px 0;
+  background-color: transparent;
+  color: var(--select-color);
+  height: 33px;
+
+  /* -webkit-appearance: none; */
+}
+
+form label {
+  display: block;
+  width: 100%;
+  border-bottom: var(--grey-border);
+  padding: 8px 0px 0px 0px;
+  position: relative;
+  margin: 4px 0;
+}
+
+#country {
+  border: none;
+}
+
+form label input {
+  display: block;
+  padding-left: 2px;
+  width: 100%;
+  border: none;
+  background: transparent;
+  background: var(--input-background);
+  outline: none;
+  transition: 0.25s;
+}
+
+form label span {
+  color: var(--fg-color-silver);
+  position: absolute;
+  top: 8px;
+  left: 2px;
+}
+
+form .action-buttons {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  margin: auto;
+}
+
+form .action-buttons:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*....     FOCUS    ....*/
+form label.focus {
+  border-bottom: var(--blue-border);
+  transition: 0.25s;
+}
+
+form label span.focus {
+  color: var(--focus-color);
+}
+
+/*....     TOP    ....*/
+
+form label span.top {
+  left: 0px;
+  top: -12px;
+  font-size: 0.7rem;
+}
+
+.btn {
+  width: 140px;
+  height: 45px;
+  background-color: var(--bg-color);
+  color: var(--high-color);
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.6;
+  transition: 0.35s;
+}
+
+.btn:hover {
+  opacity: 0.6;
+  border-radius: 25px;
+  background-color: var(--high-color);
+  color: var(--fg-color-white);
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 20px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/src/css/style-toggle.min.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="main-title">Latest weather at Eliseum Plantitia</h1>
+
+      <div class="wind">
+        <h2 class="section-title">Wind</h2>
+        <p class="reading">75kph</p>
+        <div class="wind__direction">
+          <p class="sr-only">45deg</p>
+          <div class="wind__arrow"></div>
+        </div>
+      </div>
+
+      <div class="info">
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa esse magni itaque tenetur
+          sunt repellendus magnam, recusandae fuga ratione molestiae.
+        </p>
+      </div>
+
+      <div class="unit">
+        <label for="cel">ºC</label>
+        <input type="radio" id="cel" name="unit" checked />
+        <!-- cuando unit__togle is clicked checkbox necesita ser cambiado  -->
+        <button class="unit__toggle"></button>
+        <label for="fah">ºF</label>
+        <input type="radio" id="fah" name="unit" />
+      </div>
+    </div>
+  </body>
+</html>
