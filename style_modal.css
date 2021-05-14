@@ -28,11 +28,17 @@ body,
   background: rgba(0, 0, 0, 0.6);
   transition: all 500ms ease;
   /* second step */
+
   opacity: 0;
   visibility: hidden;
 }
 
-#btn-modal:checked ~ .modal {
+#btn-modal:checked .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.in {
   opacity: 1;
   visibility: visible;
 }
@@ -47,7 +53,7 @@ body,
   transform: translateY(-30%);
 }
 
-#btn-modal:checked ~ .modal .contenedor {
+.in .contenedor {
   transform: translateY(0%);
 }
 
