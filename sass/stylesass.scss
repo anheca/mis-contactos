@@ -5,6 +5,10 @@
   font-family: Roboto, sans-serif;
 }
 
+html {
+  font-size: 1rem;
+}
+
 :root {
   --bg-color: #fff;
   --fg-color: #5c5c5e;
@@ -18,6 +22,7 @@
   --input-background: transparent;
   --focus-color: rgb(51, 41, 249);
   --hot-pink: hotpink;
+  --hot-pink: #fafafa;
   --bg-desvanecido: rgba(0, 0, 0, 0.6);
   --shadow: 1px 7px 25px rgba(0, 0, 0, 0.9);
 }
@@ -28,7 +33,6 @@ body {
   color: var(--fg-color);
 }
 
-body,
 .modal {
   width: 100%;
   height: 100vh;
@@ -41,6 +45,118 @@ body,
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.boton-modal {
+  display: none;
+}
+
+/* contact list */
+
+.full-container {
+  color: #5c5c5e;
+}
+
+.gb_Kd {
+  border: 1px solid red;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  min-width: min-content;
+}
+
+.gb_Jd {
+  height: 48px;
+  vertical-align: middle;
+  white-space: nowrap;
+  align-items: center;
+  display: flex;
+}
+
+.row-header {
+  margin-top: 200px;
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  border: 1px solid red;
+
+  .menu {
+    min-width: 280px;
+    padding-right: 30px;
+    flex: 1 0 auto;
+    align-items: center;
+
+    .menu-h {
+      padding: 12px;
+      margin: 0 4px;
+      font-size: 0.85em;
+      overflow: hidden;
+      cursor: pointer;
+      color: black;
+    }
+
+    .menu-u {
+      color: red;
+
+      a {
+        text-decoration: none;
+        color: var(--high-color);
+        opacity: 0.5;
+        font-size: 1.8em;
+        line-height: normal;
+      }
+
+      span {
+        padding-left: 4px;
+        font-size: 1.375em;
+        color: #5c5c5e;
+      }
+    }
+  }
+
+  .se_re {
+    text-align: right;
+  }
+
+  .se_he {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    justify-content: start;
+    text-align: start;
+  }
+
+  .gb_we,
+  .gb_xe {
+    display: table-cell;
+    height: 48px;
+    vertical-align: middle;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    // flex: 1 1 auto;
+    background-color: hotpink;
+    font-size: 1rem;
+
+    input {
+      width: 100%;
+      display: inline-block;
+    }
+
+    form .se_he {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: black;
+    }
+  }
 }
 
 /* modal start */

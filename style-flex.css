@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto';
+  font-size: 11px;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.contenedor {
+  padding: 10px;
+}
+
+.Jk {
+  padding: 0.2em;
+}
+
+.Jd {
+  padding: 0.6em;
+  background: transparent;
+}
+
+.fsize {
+  font-size: 1.3em;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.xhide {
+  opacity: 0;
+}
+
+.in {
+  opacity: 1;
+}
+
+button,
+input {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  background-color: #f1f3f4;
+  border-radius: 8px;
+}
+
+.search {
+  /* border: 1px solid red;⁄ */
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+
+.se_mb {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  min-width: 150px;
+}
+
+.item-2,
+.item-3 {
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+form input {
+  outline: none;
+}
+
+.item-2 .pre-f {
+  display: flex;
+}
+
+.item-2 form {
+  display: flex;
+  flex-direction: row;
+  background: transparent;
+  /* flex: 1 0 auto; */
+}
+
+.item-2 .Jce {
+  color: black;
+}
+
+.item-3 .Jd {
+  margin-left: 5px;
+}
+
+.search-in {
+  display: flex;
+  flex: 0 0 90%;
+}
+
+.ihide {
+  visibility: hidden;
+  display: none;
+}
