@@ -18,59 +18,44 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="./src/css/all.css" />
 
+    <link rel="stylesheet" href="./src/css/menustyle.min.css" />
+
     <!-- local Styles editcion de css con sass-->
     <link rel="stylesheet" href="./src/css/stylesass.min.css" />
   </head>
 
   <body>
     <section>
-      <div class="full-container">
-        <div class="gb_Kd row-header">
-          <!-- menu Contact -->
-          <div class="gb_Jd menu">
-            <div class="gb_Jd menu-h">
-              <i class="fas fa-bars"></i>
-            </div>
+      <div class="menu">
+        <div class="menu__hamburguesa">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu__icon in">
+          <i class="fas fa-user-circle user-icon"></i>
+        </div>
+        <div class="menu__leyend">
+          <span>Contactos</span>
+        </div>
 
-            <div class="gb_Jd menu-u">
-              <div>
-                <a href="#" class="m-icon-user"><i class="fas fa-user-circle user-icon"></i></a>
-                <span>Contactos</span>
-              </div>
-            </div>
-          </div>
-          <!-- search -->
-          <div class="gb_Jd search">
-            <div class="se_re">vacio</div>
-            <div class="se_he">
-              <form action="" class="gb_Ue gb_nf">
-                <div>
-                  <button>
-                    <i class="fas fa-search"></i>
-                  </button>
-                </div>
-                <div class="gb_vf gb_pf">
-                  <input type="text" />
-                </div>
-                <button>acio</button>
-                <button>Búsqueda</button>
-              </form>
-            </div>
-            <div class="se_se">
-              <div class="gb_we">
-                <i class="far fa-question-circle"></i>
-              </div>
-              <div class="gb_xe">
-                <i class="fas fa-cog"></i>
-              </div>
-            </div>
-          </div>
-          <!-- settings -->
-          <div class="gb_Jd settings">set</div>
-          <div>info acc</div>
+        <div class="search-bar" id="searchId">
+          <input type="text" class="search-bar__input" placeholder="Búscar" aria-label="search" />
+          <button class="search-bar__submit" aria-label="search submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+
+        <div class="help">
+          <i class="far fa-question-circle"></i>
+        </div>
+        <div class="settings">
+          <i class="far fa-question-circle"></i>
+        </div>
+        <div class="user-acc">
+          <i class="fas fa-ellipsis-v"></i>
         </div>
       </div>
     </section>
+
     <!-- modal para nuevos contactos -->
     <section>
       <div class="boton-modal">

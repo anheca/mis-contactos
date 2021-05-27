@@ -99,7 +99,7 @@ input:focus {
 
 @media (max-width: 2000px) {
   .menu {
-    background: lightyellow;
+    // background: lightyellow;
     grid-template-columns: 40px auto 3fr 40px 40px 40px;
     gap: 5px;
 
@@ -111,7 +111,7 @@ input:focus {
 
 @media (max-width: 1024px) {
   .menu {
-    background: rgba(255, 105, 180, 0.473);
+    // background: rgba(255, 105, 180, 0.473);
     grid-template-columns: 40px auto 3fr 40px 40px 40px;
     gap: 5px;
 
@@ -123,7 +123,7 @@ input:focus {
 
 @media (max-width: 768px) {
   .menu {
-    background: lightseagreen;
+    // background: lightseagreen;
     grid-template-columns: 40px auto 3fr 40px;
     gap: 5px;
 
@@ -137,7 +137,7 @@ input:focus {
 
 @media (max-width: 450px) {
   .menu {
-    background: orange;
+    // background: orange;
     grid-template-columns: 40px 3fr 40px;
     gap: 5px;
 
